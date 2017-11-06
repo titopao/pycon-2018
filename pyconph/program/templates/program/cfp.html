@@ -2,6 +2,8 @@
 {% load staticfiles %}
 
 {% block title %}Call for Proposals - PyCon PH 2018{% endblock %}
+{% block og_title %}Call for Proposals - PyCon PH 2018{% endblock %}
+{% block og_description %}We are now accepting proposals of presentations for next year&#39;s PyCon PH!{% endblock %}
 
 {% block content %}
 <div class='form-page'>
@@ -36,7 +38,7 @@
       <li>26 December - Closing of call for proposals
       <li>Mid January 2018 - Sending of acceptance/rejection emails
       <li>Late January 2018 - Announcement of final schedule
-      <li>25-26 February 2018 - PyCon PH 2018
+      <li>24-25 February 2018 - PyCon PH 2018
     </ul>
   </div>
   <form action='' method='post'>
@@ -45,7 +47,6 @@
     {{ form.as_p }}
     <p><button type='submit'>Submit Proposal</button></p>
   {% else %}
-    <p><img src='{% static "images/tablet.png" %}' width='50%'></p>
     <p>You need an account to submit a proposal.</p>
     <p>
       <a href='{% url "auth_login" %}?next=/cfp/'>Login</a> or
